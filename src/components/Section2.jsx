@@ -99,7 +99,8 @@ const Section2 = (props) => {
                                 return (
                                     <button onClick={() => {
                                         //setMuscles(muscleGroup)
-                                        updateMuscles(muscleGroup)
+                                        updateMuscles(muscleGroup);
+                                        toggleExpandWorkOutCombo();
                                     }} key={muscleGroupIndex }>
                                         <p className='uppercase'>{muscleGroup}</p>
                                     </button>
@@ -114,16 +115,18 @@ const Section2 = (props) => {
             <div className="workout3 ">
                 <h2><span>03</span> Become Juggernaut</h2>
                 <p>Select your ultimate objective.</p>
+                <div className="workout3-buttons">
+                    <button className='btn-workout btn-workout-fixheight'
+                    onClick={()=>setGoals('strength_power')}
+                    >Strength Power</button>
+                    <button className='btn-workout btn-workout-fixheight'
+                    onClick={()=>setGoals('growth_hypertrophy')}
+                    >Growth Hypertrophy</button>
+                    <button className='btn-workout btn-workout-fixheight'
+                    onClick={()=>setGoals('cardiovascular_endurance')}
+                    >Cardiovascular Endurance</button>
 
-                <button className='btn-workout'
-                onClick={()=>setGoals('strength_power')}
-                >Strength Power</button>
-                <button className='btn-workout'
-                onClick={()=>setGoals('growth_hypertrophy')}
-                >Growth Hypertrophy</button>
-                <button className='btn-workout'
-                onClick={()=>setGoals('cardiovascular_endurance')}
-                >Cardiovascular Endurance</button>
+                </div>
             </div>
 
             <div className="workout4 ">

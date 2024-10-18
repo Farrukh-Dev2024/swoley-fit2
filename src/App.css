@@ -129,7 +129,9 @@
   border-color: var(--color2);
   transition-duration: 200ms;
 }
-
+.btn-workout-fixheight{
+  height: 5rem;
+}
 
 
 .workout1 h2{
@@ -198,7 +200,12 @@
 .workout3{
 
 }
-
+.workout3-buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .workout3 h2{
   font-weight: 500;
 }
