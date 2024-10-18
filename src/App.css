@@ -7,6 +7,7 @@
   --color6: gray;
 }
 .app{
+  font-size: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@
 }
 .main{
   margin-top: 10%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   text-align: center;
   justify-content: center;
@@ -47,6 +48,11 @@
 .colored-text{
   color: var(--color3);
 }
+
+.grey-text{
+  color: var(--color6);
+}
+
 .uppercase{
   text-transform: uppercase;
 }
@@ -56,9 +62,10 @@
 }
 
 .btn-accept{
+  font-size: 1.5rem;
   color: white;
   margin-top: 4rem;
-  width: 8rem;
+  /* width: 8rem; */
   padding: 2px;
   border-radius: 4px;
   background: var(--color1);
@@ -83,7 +90,7 @@
 .section2{
   margin-top: 10%;
   position: relative;
-  height: 300vh;
+  min-height: 200vh;
   width: 100%;
 
   text-align: center;
@@ -99,6 +106,7 @@
   margin-top: 4rem;
 }
 .btn-workout{
+  font-size: 1.5rem;
   color: white;
   margin-left: 5px;
   margin-bottom: 20px;
@@ -238,7 +246,8 @@
   flex-direction: row;
   gap: 2px;
   justify-content: space-evenly;
-  margin-top: 10px;
+  align-items: end;
+  margin: 20px 0px;
 
 }
 .cardsingle-row2{
@@ -246,14 +255,14 @@
   flex-direction: column;
   gap: 2px;
   align-items: flex-start;
-  margin-left: 5px;
+  margin: 5px 20px;
 }
 .cardsingle-row3{
   display: flex;
   flex-direction: column;
   gap: 2px;
   align-items: flex-start;
-  margin-left: 5px;
+  margin: 5px 20px;
   width: 90%;
 }
 
@@ -265,7 +274,7 @@
   display: flex;
   flex-direction: row;
   gap: 2px;
-  margin-top: 10px;
+  margin: 5px 20px;
   justify-content: space-around;
 
 }

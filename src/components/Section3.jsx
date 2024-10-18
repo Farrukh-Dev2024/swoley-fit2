@@ -16,14 +16,14 @@ function Section3(props) {
         return (
             <div className='cardsingle'>
                 <div className='cardsingle-row1'>
-                    <h4 className=''>
+                    <h4 className='.grey-text'>
                         0{i + 1}
                     </h4>
                     <h2 className=''>{exercise.name.replaceAll("_", " ")}</h2>
-                    <p className=''>{exercise.type}</p>
+                    <p className='grey-text'>{exercise.type}</p>
                 </div>
                 <div className='cardsingle-row2'>
-                    <h3 className=''>Muscle Groups</h3>
+                    <h3 className='grey-text'>Muscle Groups</h3>
                     <p className='uppercase'>{exercise.muscles.join(' & ')}</p>
                 </div>
     
@@ -40,7 +40,7 @@ function Section3(props) {
                 <div className='cardsingle-row4'>
                     {['reps', 'rest', 'tempo'].map(info => {
                         return (
-                            <div key={info} className=''>
+                            <div key={info} className='grey-text'>
                                 <h3 className='uppercase'>{info === 'reps' ? `${exercise.unit}` : info}</h3>
     
                                 <p className=''>{exercise[info]}</p>
