@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef, useEffect} from 'react';
 
 
 function Section3(props) {
@@ -28,9 +28,9 @@ function Section3(props) {
                 </div>
     
                 <div className='cardsingle-row3'>
-                    {exercise.description.split('___').map((val) => {
+                    {exercise.description.split('___').map((val,i) => {
                         return (
-                            <p className=''>
+                            <p className='' key={i}>
                                 {val}
                             </p>
                         )
@@ -65,15 +65,32 @@ function Section3(props) {
             //<ExerciseCard i={i} exercise={exercise} key={i} />
         )
     })
+
+    
     return (
         <div className='cardsmain'>
             {retdata}
+            {ScrollToCards(props)}
         </div>
         
     );
 
 
 }
+const ScrollToCards = (props) => {
+    const {cardsData} = props;
+    if (!cardsData){return;}
+    // window.HTMLElement.prototype.scrollIntoView = function() {};
+useEffect(()=>{
+    setTimeout(()=>{
+        const element = document.getElementsByClassName('cardsmain')[0];            
+        element?.scrollIntoView({
+            behavior: 'smooth'
+          });         
+  
+    },0)
 
+},[cardsData])
+}
 
 export default Section3;
